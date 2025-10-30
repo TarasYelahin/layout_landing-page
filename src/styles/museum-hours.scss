@@ -1,0 +1,34 @@
+.museum-hours {
+  @include pageGrid;
+
+  &__title {
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 1 /4;
+    }
+
+    @include onDesktop {
+      grid-column: 1 /6;
+    }
+  }
+
+  &__style {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 27px;
+    font-size: 16px;
+  }
+  &--container {
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 4 / -1;
+    }
+
+    @include onDesktop {
+      grid-column: 6 / -1;
+    }
+  }
+}

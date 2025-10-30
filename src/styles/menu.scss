@@ -1,0 +1,40 @@
+.menu {
+  box-sizing: border-box;
+
+  height: 100vh;
+  background-color: #d12d35;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &__nav {
+    margin-bottom: 40px;
+  }
+
+  &__phone--number {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: 0;
+  }
+
+  &__call-to-order {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    padding-bottom: 8px;
+    border-bottom: 1px solid white;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+  }
+
+  &__content {
+    @include contentPaddingInline;
+  }
+}

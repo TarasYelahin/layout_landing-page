@@ -1,0 +1,137 @@
+.now-on-view {
+  &__show {
+    display: grid;
+    row-gap: 48px;
+
+    @include onTablet {
+      row-gap: 64px;
+    }
+  }
+  &--p-title {
+    text-align: center;
+  }
+}
+
+.now-on-views {
+  &__pictures {
+    @include pageGrid;
+
+    gap: 25px;
+
+    &--three {
+      grid-template-columns: repeat(3, 1fr);
+
+      @include onTablet {
+        grid-template-columns: repeat(6, 1fr);
+
+        .now-on-views__pictures--three-visible {
+          grid-column: span 3;
+        }
+
+        .now-on-views__pictures--three-invisible {
+          display: none;
+        }
+      }
+
+      @include onDesktop {
+        grid-template-columns: repeat(12, 1fr);
+
+        .now-on-views__pictures--three-visible {
+          grid-column: span 4;
+        }
+        .now-on-views__pictures--three-invisible {
+          display: grid;
+          grid-column: span 4;
+        }
+      }
+    }
+  }
+
+  &__link {
+    &--wide {
+      @include onTablet {
+        grid-column: span 4;
+      }
+
+      @include onDesktop {
+        grid-column: span 8;
+      }
+    }
+    &--square {
+      @include onTablet {
+        grid-column: span 2;
+      }
+
+      @include onDesktop {
+        grid-column: span 4;
+      }
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition:
+      transform $effectDuration ease-in-out,
+      border-radius $effectDuration ease-in-out,
+      box-shadow $effectDuration ease-in-out;
+
+    &--fit {
+      object-position: top right;
+    }
+    &--fit-top {
+      object-position: top left;
+    }
+  }
+
+  &__picture:hover {
+    transform: scale(1.05);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
+  }
+}
+
+.bold-red {
+  color: $second-main-text-color;
+}
+
+.now-on-views__catalog {
+  @include pageGrid;
+}
+
+.now-on-views__catalog--link {
+  grid-column: 1/ -1;
+  padding: 15px 0;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+
+  background-color: $second-main-text-color;
+  color: $secondary-text-color;
+
+  @include onTablet {
+    grid-column: 2/ -2;
+  }
+
+  @include onDesktop {
+    grid-column: 5/ -5;
+  }
+
+  transition:
+    transform $effectDuration ease-in-out,
+    border-radius $effectDuration ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.now-on-views__catalog--link:hover {
+  color: $second-main-text-color;
+  border: 2px solid $second-main-text-color;
+  background-color: $secondary-text-color;
+  transform: scale(1.05);
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
+}

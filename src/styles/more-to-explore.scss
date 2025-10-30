@@ -1,0 +1,46 @@
+.explore-online {
+  display: grid;
+
+  &__sections {
+    @include pageGrid;
+
+    row-gap: 48px;
+  }
+
+  &__text {
+    text-align: center;
+
+    &--title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      color: $second-main-text-color;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    transition:
+      transform $effectDuration ease-in-out,
+      border-radius $effectDuration ease-in-out,
+      box-shadow $effectDuration ease-in-out;
+  }
+
+  &__picture:hover {
+    transform: scale(1.05);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
+  }
+}
+
+.explore-online__section {
+  grid-column: 1/-1;
+
+  @include onTablet {
+    grid-column: 2/-2;
+  }
+
+  @include onDesktop {
+    grid-column: span 4;
+  }
+}

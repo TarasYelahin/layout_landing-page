@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-image: url(../images/footer-bg.png);
+  padding-top: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include onTablet {
+    background-image: url(../images/footer-bg-tablet.png);
+  }
+
+  @include onDesktop {
+    background-image: url(../images/footer-bg-desktop.png);
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: 1260px;
+  }
+}

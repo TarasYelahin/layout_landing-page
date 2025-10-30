@@ -1,0 +1,30 @@
+.section-title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: -1, 5px;
+  text-align: center;
+  position: relative;
+
+  &--plan-visit {
+    position: absolute;
+    top: -20px;
+    left: 0;
+
+    color: $second-main-text-color;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 140%;
+  }
+
+  @include onTablet {
+    font-size: 48px;
+    margin-bottom: 48px;
+  }
+
+  &--align--left {
+    text-align: left;
+  }
+}
