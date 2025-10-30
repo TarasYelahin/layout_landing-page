@@ -19,7 +19,7 @@
     line-height: 140%;
   }
 
-  @include onTablet {
+  @include on-tablet {
     font-size: 48px;
     margin-bottom: 48px;
   }
