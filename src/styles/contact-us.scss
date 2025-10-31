@@ -6,12 +6,14 @@
 
 .placeholder {
   background-color: $placeholder-bg-color;
-  border: none;
+  border: 1px solid transparent;
+  transition:
+    border-color $effectDuration ease,
+    transform $effectDuration ease;
   font-weight: 400px;
   font-family: Cinzel, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  transition: $effectDuration;
   box-sizing: border-box;
 }
 
@@ -30,6 +32,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
+  border: none;
 
   background-color: $second-main-text-color;
   color: $secondary-text-color;
@@ -46,7 +49,7 @@
 }
 
 .placeholder:hover {
-  border: 1px solid #d5d7de;
+  border-color: $placeholder-hover;
   transform: scale(1.05);
 }
 
@@ -101,4 +104,9 @@
   padding: 0;
   margin: 0;
   text-align: left;
+}
+
+a {
+  color: $main-text-color;
+  text-decoration: none;
 }
